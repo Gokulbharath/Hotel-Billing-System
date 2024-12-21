@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .dish-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .dish {
+            cursor: pointer;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            width: calc(30% - 40px); /* Adjust for 3 dishes per row */
+        }
+
+        .dish img {
+            width: 250px;
+            height: 250px;
+            border: 10px solid #ddd;
+        }
+
+        .dish h3 {
+            text-decoration: none;
+            color: green;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">SS<br>Restaurants</a>
+            </div>
+	<div id="tableNumberDisplay" style="font-size: 20px; color: white;"></div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="search-bar">
+            <input type="number" id="tableNumber" placeholder="Enter Table Number" min="1">
+            <button onclick="navigateToSection()">Submit</button>
+        </div>
+
+        <div class="dish-container">
+            <div class="dish">
+                <a href="nonveg.html" id="nonveg-link">
+                    <img src="non-veg.jpeg" alt="Biryani">
+                    <h3>NON-VEG FOOD</h3>
+                </a>
+            </div>
+            <div class="dish">
+                <a href="veg.html" id="veg-link">
+                    <img src="veg.jpeg" alt="Sambar">
+                    <h3>VEG FOOD</h3>
+                </a>
+            </div>
+            <div class="dish">
+                <a href="tiffin.html" id="tiffin-link">
+                    <img src="tiffen.jpeg" alt="Dosa">
+                    <h3>TIFFIN</h3>
+                </a>
+            </div>
+            <div class="dish">
+                <a href="biryani.html" id="biryani-link">
+                    <img src="biryani12.jpeg" alt="Idli">
+                    <h3>BIRYANI</h3>
+                </a>
+            </div>
+            <div class="dish">
+                <a href="desert.html" id="desert-link">
+                    <img src="des.jpeg" alt="Uttapam">
+                    <h3>DESSERT</h3>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        </b></p>
+    </footer>
+
+    <script>
+        function navigateToSection() {
+            const tableNumber = document.getElementById('tableNumber').value;
+            if (tableNumber) {
+                document.getElementById('tableNumberDisplay').innerText = `Table Number: ${tableNumber}`;
+                
+                document.getElementById('nonveg-link').href = `nonveg.html?table=${tableNumber}`;
+                document.getElementById('veg-link').href = `veg.html?table=${tableNumber}`;
+                document.getElementById('tiffin-link').href = `tiffin.html?table=${tableNumber}`;
+                document.getElementById('biryani-link').href = `biryani.html?table=${tableNumber}`;
+                document.getElementById('desert-link').href = `desert.html?table=${tableNumber}`;
+
+                // Optional: Navigate to the first section directly
+                // window.location.href = `nonveg.html?table=${tableNumber}`;
+            } else {
+                alert('Please enter a table number.');
+            }
+        }
+    </script>
+</body>
+</html>

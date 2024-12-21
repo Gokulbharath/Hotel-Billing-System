@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .dish:hover {
+            transform: translateY(-5px);
+        }
+
+        .dish img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .dish-name {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .quantity {
+            margin: 10px 0;
+        }
+
+        .quantity label {
+            font-weight: bold;
+            color: #666;
+        }
+
+        .quantity input {
+            width: 50px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            top: 0%;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">SS<br>Restaurants</a>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Select Your Dish</h1>
+
+        <div class="dish">
+            <img src="kichi.jpeg" alt="Dish Photo">
+            <h3 class="dish-name">RAVA KICHIADI</h3>
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="dish">
+            <img src="dosa.jpeg" alt="Dosa">
+            <h3 class="dish-name">Dosa</h3>
+            <div class="quantity">
+                <label for="dosa_quantity">Quantity:</label>
+                <input type="number" id="dosa_quantity" name="dosa_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img src="idili.jpeg" alt="Idli">
+            <h3 class="dish-name">Idli</h3>
+            <div class="quantity">
+                <label for="idli_quantity">Quantity:</label>
+                <input type="number" id="idli_quantity" name="idli_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img src="ps.jpeg" alt="Poori">
+            <h3 class="dish-name">Poori</h3>
+            <div class="quantity">
+                <label for="poori_quantity">Quantity:</label>
+                <input type="number" id="poori_quantity" name="poori_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img src="pon.jpeg" alt="Pongal">
+            <h3 class="dish-name">Pongal</h3>
+            <div class="quantity">
+                <label for="pongal_quantity">Quantity:</label>
+                <input type="number" id="pongal_quantity" name="pongal_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img src="chap.jpeg" alt="Chapati">
+            <h3 class="dish-name">Chapati</h3>
+            <div class="quantity">
+                <label for="chapati_quantity">Quantity:</label>
+                <input type="number" id="chapati_quantity" name="chapati_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="dish">
+            <img src="por.jpeg" alt="Parotta">
+            <h3 class="dish-name">Parotta</h3>
+            <div class="quantity">
+                <label for="parotta_quantity">Quantity:</label>
+                <input type="number" id="parotta_quantity" name="parotta_quantity" min="1" value="1">
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                let dishName = this.parentElement.querySelector('.dish-name').innerText.trim();
+                addToCart(dishName, 10.99); // Replace with actual dish name and price
+            });
+        });
+
+        function addToCart(dishName, price) {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItemIndex = cart.findIndex(item => item.name === dishName);
+
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity += quantity;
+            } else {
+                cart.push({ name: dishName, price: price, quantity: quantity });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>
