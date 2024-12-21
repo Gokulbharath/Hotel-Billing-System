@@ -1,4 +1,3 @@
-Here’s a professional README file for your **Hotel Billing System** project:  
 
 ---
 
@@ -62,10 +61,14 @@ hotel-billing-system/
 1. **Index Page**:  
    - Displays categories like Veg, Non-Veg, Desserts, and Biryani.  
    - Each category contains a list of items with prices and an "Add to Cart" button.
+     ![Screenshot 2024-12-21 114626](https://github.com/user-attachments/assets/8a68eb0c-dba7-478f-8444-d26904ad8bcb)
+     ![Screenshot 2024-12-21 114636](https://github.com/user-attachments/assets/0fbed466-9b02-4639-8c74-e1eebcf81a77)
+
 
 2. **Cart**:  
    - Updates dynamically when items are added or removed.  
    - Displays the selected items, quantity, and subtotal.
+    ![Screenshot 2024-12-21 114648](https://github.com/user-attachments/assets/a9a17394-92be-4356-9d19-f9db9e8ce01b)
 
 3. **Billing**:  
    - Shows an itemized bill with the total amount.  
